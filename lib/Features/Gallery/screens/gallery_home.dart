@@ -1,5 +1,5 @@
-import 'package:app/Features/Gallery/screens/grid_screen.dart';
-import 'package:app/Features/Profil/screens/profil_screen.dart';
+import 'package:app/features/gallery/screens/grid_screen.dart';
+import 'package:app/features/profil/screens/profil_screen.dart';
 import 'package:flutter/material.dart';
 
 class GalleryHome extends StatefulWidget {

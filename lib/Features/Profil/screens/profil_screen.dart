@@ -1,4 +1,4 @@
-import 'package:app/Features/Profil/models/user.dart';
+import 'package:app/features/profil/models/user.dart';
 import 'package:flutter/material.dart';
 
 class ProfilScreen extends StatelessWidget {

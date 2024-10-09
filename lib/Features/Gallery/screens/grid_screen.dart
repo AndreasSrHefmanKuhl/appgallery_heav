@@ -1,5 +1,5 @@
-import 'package:app/Features/Gallery/repository/Widgets/gallery_card.dart';
-import 'package:app/Features/Gallery/repository/gallery_data.dart';
+import 'package:app/features/gallery/repository/Widgets/gallery_card.dart';
+import 'package:app/features/gallery/repository/gallery_data.dart';
 import 'package:flutter/material.dart';
 
 class GridScreen extends StatelessWidget {

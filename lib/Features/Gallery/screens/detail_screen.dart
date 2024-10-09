@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:app/Features/Gallery/repository/gallery_data.dart';
+import 'package:app/features/gallery/repository/gallery_data.dart';
 
 class DetailScreen extends StatelessWidget {
   const DetailScreen({super.key});
