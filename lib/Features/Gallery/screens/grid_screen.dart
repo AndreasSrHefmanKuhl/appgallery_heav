@@ -1,5 +1,5 @@
 import 'package:app/features/gallery/repository/Widgets/gallery_card.dart';
-import 'package:app/features/gallery/repository/gallery_data.dart';
+import 'package:app/features/gallery/models/gallery_item.dart';
 import 'package:app/features/gallery/screens/detail_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -17,12 +17,22 @@ class GridScreen extends StatelessWidget {
             mainAxisSpacing: 15,
           ),
           itemCount: galleryData.length,
-          itemBuilder: (context, index) {
+          itemBuilder: (context, int index) {
             final item = galleryData[index];
-            return GestureDetector(onTap:({Navigator.push(context,MaterialPageRoute(builder: context) => DetailScreen(item: item)}),
-            child:GalleryCard(item: item));
-          }
-    ),
+            return GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => DetailScreen(item: item),
+                  ),
+                );
+              },
+              child: GalleryCard(
+                item: item,
+              ),
+            );
+          }),
     );
   }
 }
