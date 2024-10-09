@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 class DetailScreen extends StatelessWidget {
   const DetailScreen({super.key, required this.item});
-
   final GalleryItem item;
 
   @override
@@ -11,7 +10,7 @@ class DetailScreen extends StatelessWidget {
     return const SingleChildScrollView(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
-        children: [],
+        children: [Image.asset(item.item)],
       ),
     );
   }
