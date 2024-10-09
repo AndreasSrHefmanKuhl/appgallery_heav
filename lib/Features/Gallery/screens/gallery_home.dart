@@ -6,10 +6,10 @@ class GalleryHome extends StatefulWidget {
   const GalleryHome({super.key});
 
   @override
-  State<GalleryHome> createState() => _GalleryHomeState();
+  State<GalleryHome> createState() => _HomeState();
 }
 
-class _GalleryHomeState extends State<GalleryHome> {
+class _HomeState extends State<GalleryHome> {
   int _selectedIndex = 0;
 
   static const List<Widget> _screens = <Widget>[
