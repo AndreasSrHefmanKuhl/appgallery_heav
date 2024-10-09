@@ -7,18 +7,35 @@ class DetailScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            Image.asset(item.imagePath),
-            const SizedBox(height: 8),
-            Text('geschossen am:${item.imageDate}'),
-            const SizedBox(height: 8),
-            Text(item.imageDescription),
-          ],
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('MyGallery'),
+          actions: const [],
+        ),
+        body: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                SizedBox(
+                    height: 300,
+                    width: 300,
+                    child: Image.asset(item.imagePath, fit: BoxFit.cover)),
+                const SizedBox(height: 8),
+                Text('geschossen am:${item.imageDate}',
+                    style: const TextStyle(
+                      fontSize: 12,
+                    )),
+                const SizedBox(height: 8),
+                Text(item.imageDescription),
+                FloatingActionButton(
+                  onPressed: () => Navigator.pop(context),
+                ),
+              ],
+            ),
+          ),
         ),
       ),
     );
