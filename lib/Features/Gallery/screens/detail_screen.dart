@@ -10,7 +10,9 @@ class DetailScreen extends StatelessWidget {
     return const SingleChildScrollView(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
-        children: [Image.asset(item.item)],
+        children: [
+          Image.asset(),
+        ],
       ),
     );
   }
