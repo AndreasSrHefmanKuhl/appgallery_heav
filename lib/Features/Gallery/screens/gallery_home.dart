@@ -25,27 +25,29 @@ class _GalleryHomeState extends State<GalleryHome> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('MyGallery'),
-        actions: const [],
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('MyGallery'),
+          actions: const [],
+        ),
+        body: _screens[_selectedIndex],
+        bottomNavigationBar: BottomNavigationBar(
+            currentIndex: _selectedIndex,
+            onTap: (int index) {
+              _onItemTapped(index);
+            },
+            items: const [
+              BottomNavigationBarItem(
+                icon: Icon(Icons.image),
+                label: 'Bilder',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.person),
+                label: 'Über mich',
+              ),
+            ]),
       ),
-      body: _screens[_selectedIndex],
-      bottomNavigationBar: BottomNavigationBar(
-          currentIndex: _selectedIndex,
-          onTap: (int index) {
-            _onItemTapped(index);
-          },
-          items: const [
-            BottomNavigationBarItem(
-              icon: Icon(Icons.image),
-              label: 'Bilder',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.person),
-              label: 'Über mich',
-            ),
-          ]),
     );
   }
 }
