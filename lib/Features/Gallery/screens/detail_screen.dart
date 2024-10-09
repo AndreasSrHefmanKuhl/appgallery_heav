@@ -31,6 +31,7 @@ class DetailScreen extends StatelessWidget {
                 const SizedBox(height: 8),
                 Text(item.imageDescription),
                 FloatingActionButton(
+                  child: const Icon(Icons.arrow_back),
                   onPressed: () => Navigator.pop(context),
                 ),
               ],
