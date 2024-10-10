@@ -10,6 +10,10 @@ class DetailScreen extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
+          leading: FloatingActionButton(
+            child: const Icon(Icons.arrow_back),
+            onPressed: () => Navigator.pop(context),
+          ),
           title: const Text('MyGallery'),
           actions: const [],
         ),
