@@ -10,6 +10,7 @@ class DetailScreen extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
+          surfaceTintColor: Colors.green,
           leading: IconButton(
             iconSize: 10,
             icon: const Icon(Icons.arrow_back, size: 20),
@@ -25,9 +26,12 @@ class DetailScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 SizedBox(
-                    height: 300,
-                    width: 300,
-                    child: Image.asset(item.imagePath, fit: BoxFit.cover)),
+                    height: 400,
+                    width: 500,
+                    child: Image.asset(
+                      item.imagePath,
+                      fit: BoxFit.cover,
+                    )),
                 const SizedBox(height: 8),
                 Text('geschossen am:${item.imageDate}',
                     style: const TextStyle(
@@ -36,12 +40,13 @@ class DetailScreen extends StatelessWidget {
                 const SizedBox(height: 20),
                 Text(
                   item.imageDescription,
-                  style: const TextStyle(fontSize: 20),
+                  style: const TextStyle(fontSize: 16),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     FloatingActionButton(
+                      backgroundColor: const Color.fromARGB(137, 154, 195, 155),
                       mini: true,
                       child: const Icon(Icons.arrow_back),
                       onPressed: () => Navigator.pop(context),

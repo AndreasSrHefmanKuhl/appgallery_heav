@@ -28,6 +28,7 @@ class _HomeState extends State<GalleryHome> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
+          surfaceTintColor: Colors.green,
           title: const Text('MyGallery'),
           actions: const [],
         ),
