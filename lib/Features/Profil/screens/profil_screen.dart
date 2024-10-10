@@ -12,11 +12,11 @@ class ProfilScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             CircleAvatar(
-              maxRadius: 65,
+              maxRadius: 100,
               backgroundImage: AssetImage('assets/images/kaya.jpeg'),
             ),
             SizedBox(height: 20),
-            Text('Kaya'),
+            Text('Kaya Müller', style: TextStyle(fontSize: 25)),
             SizedBox(height: 5),
             Text('Fotograf'),
             SizedBox(height: 15),
