@@ -1,4 +1,5 @@
 import 'package:app/features/gallery/models/gallery_item.dart';
+import 'package:app/features/gallery/screens/gallery_home.dart';
 import 'package:app/features/gallery/widgets/shared/Widget/neumorphic_button.dart';
 import 'package:flutter/material.dart';
 
@@ -39,20 +40,22 @@ class DetailLayout extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 NeumorphicButton(
-                  width: 20,
-                  height: 25,
-                  bottomRightShadowColor:
-                      const Color.fromARGB(179, 172, 67, 85),
-                  topLeftShadowColor: const Color.fromARGB(255, 4, 255, 134),
-                  backgroundColor: const Color.fromARGB(242, 255, 255, 255),
-                  onTap: () => Navigator.pop(context),
-                  child: const SizedBox(
-                      height: 25,
-                      width: 25,
-                      child: Icon(
-                        Icons.arrow_back,
-                      )),
-                ),
+                    padding: const EdgeInsets.all(8),
+                    width: 30,
+                    height: 35,
+                    bottomRightShadowColor:
+                        const Color.fromARGB(179, 172, 67, 85),
+                    topLeftShadowColor: const Color.fromARGB(255, 4, 255, 134),
+                    backgroundColor: const Color.fromARGB(242, 255, 255, 255),
+                    onTap: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const GalleryHome()),
+                        ),
+                    child: const Icon(
+                      Icons.arrow_back,
+                      opticalSize: 20,
+                    )),
               ],
             ),
           ],
