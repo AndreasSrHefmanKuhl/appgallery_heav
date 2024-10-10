@@ -1,4 +1,5 @@
 import 'package:app/features/gallery/models/gallery_item.dart';
+import 'package:app/features/gallery/widgets/shared/Widget/neumorphic_button.dart';
 import 'package:flutter/material.dart';
 
 class DetailLayout extends StatelessWidget {
@@ -37,11 +38,14 @@ class DetailLayout extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                FloatingActionButton(
+                NeumorphicButton(
+                  width: 20,
+                  height: 25,
+                  bottomRightShadowColor: Colors.greenAccent,
+                  topLeftShadowColor: Colors.greenAccent,
                   backgroundColor: const Color.fromARGB(137, 154, 195, 155),
-                  mini: true,
                   child: const Icon(Icons.arrow_back),
-                  onPressed: () => Navigator.pop(context),
+                  onTap: () => Navigator.pop(context),
                 ),
               ],
             ),
