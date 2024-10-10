@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class NeumorphicButton extends StatefulWidget {
   const NeumorphicButton(
-      {Key? key,
+      {super.key,
       required this.width,
       required this.height,
       required this.child,
@@ -21,8 +21,8 @@ class NeumorphicButton extends StatefulWidget {
       this.borderWidth,
       this.borderColor,
       this.topLeftOffset,
-      this.bottomRightOffset})
-      : super(key: key);
+      this.bottomRightOffset});
+
   final Widget child;
   final double width;
   final double height;
