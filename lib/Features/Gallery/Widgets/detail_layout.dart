@@ -45,8 +45,13 @@ class DetailLayout extends StatelessWidget {
                       const Color.fromARGB(179, 172, 67, 85),
                   topLeftShadowColor: const Color.fromARGB(255, 4, 255, 134),
                   backgroundColor: const Color.fromARGB(242, 255, 255, 255),
-                  child: const Icon(Icons.arrow_back),
                   onTap: () => Navigator.pop(context),
+                  child: const SizedBox(
+                      height: 25,
+                      width: 25,
+                      child: Icon(
+                        Icons.arrow_back,
+                      )),
                 ),
               ],
             ),
