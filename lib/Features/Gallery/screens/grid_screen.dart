@@ -1,4 +1,4 @@
-import 'package:app/features/gallery/Widgets/gallery_card.dart';
+import 'package:app/features/gallery/widgets/gallery_card.dart';
 import 'package:app/features/gallery/models/gallery_item.dart';
 import 'package:app/features/gallery/screens/detail_screen.dart';
 import 'package:flutter/material.dart';
