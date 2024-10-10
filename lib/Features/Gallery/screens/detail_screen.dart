@@ -38,10 +38,13 @@ class DetailScreen extends StatelessWidget {
                   item.imageDescription,
                   style: const TextStyle(fontSize: 20),
                 ),
-                FloatingActionButton(
-                  child: const Icon(Icons.arrow_back),
-                  onPressed: () => Navigator.pop(context),
-                ),
+                Row(mainAxisAlignment: MainAxisAlignment.end,
+                  FloatingActionButton(
+                    mini: true,
+                    child: const Icon(Icons.arrow_back),
+                    onPressed: () => Navigator.pop(context),
+                  ),
+                ]),
               ],
             ),
           ),
