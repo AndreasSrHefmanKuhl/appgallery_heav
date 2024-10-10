@@ -41,11 +41,12 @@ class DetailLayout extends StatelessWidget {
                 NeumorphicButton(
                   width: 20,
                   height: 25,
-                  bottomRightShadowColor: Colors.greenAccent,
+                  bottomRightShadowColor:
+                      const Color.fromARGB(179, 172, 67, 85),
                   topLeftShadowColor: const Color.fromARGB(255, 4, 255, 134),
                   backgroundColor: const Color.fromARGB(242, 255, 255, 255),
                   child: const Icon(Icons.arrow_back),
-                  onTap: () => Navigator.pop(),
+                  onTap: () => Navigator.pop(context),
                 ),
               ],
             ),
