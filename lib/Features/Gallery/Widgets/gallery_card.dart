@@ -19,7 +19,11 @@ class GalleryCard extends StatelessWidget {
             child: SizedBox(
                 width: 150,
                 height: 150,
-                child: Image.asset(item.imagePath, fit: BoxFit.cover)),
+                child: Image.asset(
+                  item.imagePath,
+                  fit: BoxFit.cover,
+                  filterQuality: FilterQuality.high,
+                )),
           ),
           Text(item.imageTitle)
         ],
