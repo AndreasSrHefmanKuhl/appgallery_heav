@@ -10,8 +10,9 @@ class DetailScreen extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          leading: FloatingActionButton(
-            child: const Icon(Icons.arrow_back),
+          leading: IconButton(
+            iconSize: 10,
+            icon: const Icon(Icons.arrow_back, size: 20),
             onPressed: () => Navigator.pop(context),
           ),
           title: const Text('MyGallery'),
@@ -32,8 +33,11 @@ class DetailScreen extends StatelessWidget {
                     style: const TextStyle(
                       fontSize: 12,
                     )),
-                const SizedBox(height: 8),
-                Text(item.imageDescription),
+                const SizedBox(height: 20),
+                Text(
+                  item.imageDescription,
+                  style: const TextStyle(fontSize: 20),
+                ),
                 FloatingActionButton(
                   child: const Icon(Icons.arrow_back),
                   onPressed: () => Navigator.pop(context),
